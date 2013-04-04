@@ -7,8 +7,14 @@ import javax.imageio.ImageIO;
 import org.jgap.InvalidConfigurationException;
 
 public class Evolution {
+	static { /* works fine! ! */
+		System.setProperty("java.awt.headless", "true");
+	}
+
+
 	public static final void main(String[] args)
 			throws InvalidConfigurationException {
+
 		/* EvolutionFramework frame = new EvolutionFramework(); */
 
 		// Load image 
