@@ -42,15 +42,17 @@ public class Evolve
 		Genotype population = Genotype.randomInitialGenotype(conf);
 
 
-		for (int i = 0; i<50; i++) {
+		for (int i = 0; i<1000; i++) {
 			population.evolve();
-			bestSoluton = population.getFittestChromosome();
-			System.out.println(bestSoluton.getFitnessValue());
+			if(i%100 == 0) {
+				System.out.println(i);
+			}
 		}
 
 		bestSoluton = population.getFittestChromosome();
 		((Fitness)fit).drawChromosome( bestSoluton );
 		((Fitness)fit).save( "best.png" );
+		System.out.println("Fittest: "+bestSoluton.getFitnessValue());
 
 		/* System.out.println("best Solution:"+bestSoluton.getGene(0).getAllele()); */
 
