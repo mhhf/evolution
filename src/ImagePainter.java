@@ -30,12 +30,13 @@ public class ImagePainter
 	}	
 
 	// d in [0, 39]
-	public void drawLine(int d, int e) {
-		int[] p1,p2;
-		p1 = getPoint ( d );
-		p2 = getPoint ( e );
+	public void drawLine(int x1, int y1, int x2, int y2) {
+		/* int[] p1,p2; */
+		/* p1 = getPoint ( d ); */
+		/* p2 = getPoint ( e ); */
 
-		Shape l = new Line2D.Double( p1[0], p1[1], p2[0], p2[1] );
+		/* Shape l = new Line2D.Double( p1[0], p1[1], p2[0], p2[1] ); */
+		Shape l = new Line2D.Double( x1, y1, x2, y2 );
 		g.draw(l);
 	}
 

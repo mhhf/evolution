@@ -30,8 +30,10 @@ public class Fitness extends FitnessFunction
 	protected void drawChromosome(IChromosome c){
 		for (int i=0; i<Evolve.lines; i++) {
 			handler.drawLine(
-					(Integer) c.getGene(i*2).getAllele(),
-					(Integer) c.getGene(i*2+1).getAllele() 
+					(Integer) c.getGene(i*4).getAllele(),
+					(Integer) c.getGene(i*4+1).getAllele(),
+					(Integer) c.getGene(i*4+2).getAllele(),
+					(Integer) c.getGene(i*4+3).getAllele() 
 					);
 		}
 	}

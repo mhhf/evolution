@@ -28,8 +28,8 @@ public class ImageHandler
 	}
 
 	// Draw a line on canvas
-	public void drawLine( int a, int b ) {
-		paint.drawLine(a,b);
+	public void drawLine( int a, int b, int c, int d ) {
+		paint.drawLine(a,b,c,d);
 	}
 
 	public double compare() {

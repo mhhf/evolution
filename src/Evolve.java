@@ -16,8 +16,11 @@ public class Evolve
 
 	private IChromosome bestSoluton;
 
-	public static final int lines = 200;
-	public static final int res = 128;
+	public static final int lines = 400;
+	public static final int informations = 4;
+
+	public static final int res = 256;
+	public static final int iterations = 100;
 
 	public Evolve( BufferedImage img ) throws InvalidConfigurationException {
 		
@@ -27,24 +30,24 @@ public class Evolve
 
 		conf.setFitnessFunction(fit);
 
-		Gene[] sampleGenes = new Gene[Evolve.lines*2];
+		Gene[] sampleGenes = new Gene[Evolve.lines*Evolve.informations];
 
-		for (int i=0; i<Evolve.lines*2; i++) {
-			sampleGenes[i] = new IntegerGene(conf, 0, Evolve.res*4-1);
+		for (int i=0; i<Evolve.lines*Evolve.informations; i++) {
+			sampleGenes[i] = new IntegerGene(conf, 0, Evolve.res-1);
 		}
 
 		Chromosome crom = new Chromosome(conf, sampleGenes);
 
 		conf.setSampleChromosome(crom);
 
-		conf.setPopulationSize(10);
+		conf.setPopulationSize(100);
 
 		Genotype population = Genotype.randomInitialGenotype(conf);
 
 
-		for (int i = 0; i<1000; i++) {
+		for (int i = 0; i<Evolve.iterations; i++) {
 			population.evolve();
-			if(i%100 == 0) {
+			if(i% ( Evolve.iterations/100) == 0) {
 				System.out.println(i);
 			}
 		}
