@@ -20,7 +20,7 @@ public class Evolve
 	public static final int informations = 4;
 
 	public static final int res = 256;
-	public static final int iterations = 100;
+	public static final int iterations = 10000;
 	public static final int populationSize = 2;
 
 	public Evolve( BufferedImage img ) throws InvalidConfigurationException {
@@ -49,7 +49,8 @@ public class Evolve
 		for (int i = 0; i<Evolve.iterations; i++) {
 			population.evolve();
 			if(i% ( Evolve.iterations/100) == 0) {
-				System.out.println(i);
+				bestSoluton = population.getFittestChromosome();
+				System.out.println(i+"  "+bestSoluton.getFitnessValue());
 			}
 		}
 
