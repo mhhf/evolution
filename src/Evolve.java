@@ -16,11 +16,12 @@ public class Evolve
 
 	private IChromosome bestSoluton;
 
-	public static final int lines = 400;
+	public static final int lines = 200;
 	public static final int informations = 4;
 
 	public static final int res = 256;
 	public static final int iterations = 100;
+	public static final int populationSize = 2;
 
 	public Evolve( BufferedImage img ) throws InvalidConfigurationException {
 		
@@ -40,7 +41,7 @@ public class Evolve
 
 		conf.setSampleChromosome(crom);
 
-		conf.setPopulationSize(100);
+		conf.setPopulationSize(Evolve.populationSize);
 
 		Genotype population = Genotype.randomInitialGenotype(conf);
 
