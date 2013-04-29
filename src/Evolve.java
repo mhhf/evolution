@@ -1,4 +1,7 @@
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import org.jgap.Chromosome;
 import org.jgap.Configuration;
@@ -11,8 +14,7 @@ import org.jgap.impl.DefaultConfiguration;
 import org.jgap.impl.DoubleGene;
 import org.jgap.impl.IntegerGene;
 
-public class Evolve
-{
+public class Evolve {
 
 	private IChromosome bestSoluton;
 
@@ -20,10 +22,11 @@ public class Evolve
 	public static final int informations = 4;
 
 	public static final int res = 256;
-	public static final int iterations = 10000;
+	public static final int iterations = 1000;
 	public static final int populationSize = 2;
 
-	public Evolve( BufferedImage img ) throws InvalidConfigurationException {
+	public Evolve(BufferedImage img) throws InvalidConfigurationException,
+			IOException {
 		
 		Configuration conf = new DefaultConfiguration();
 
@@ -46,11 +49,17 @@ public class Evolve
 		Genotype population = Genotype.randomInitialGenotype(conf);
 
 
-		for (int i = 0; i<Evolve.iterations; i++) {
+		FileWriter fstream = new FileWriter("out.txt");
+		BufferedWriter out = new BufferedWriter(fstream);
+
+		
+		out.write("{");
+		int i=0;
+		for (i = 0; i<Evolve.iterations; i++) {
 			population.evolve();
 			if(i% ( Evolve.iterations/100) == 0) {
 				bestSoluton = population.getFittestChromosome();
-				System.out.println(i+"  "+bestSoluton.getFitnessValue());
+				out.write("{"+i+","+bestSoluton.getFitnessValue()+"},");
 			}
 		}
 
@@ -58,6 +67,8 @@ public class Evolve
 		((Fitness)fit).drawChromosome( bestSoluton );
 		((Fitness)fit).save( "best.png" );
 		System.out.println("Fittest: "+bestSoluton.getFitnessValue());
+		out.write("{"+i+","+bestSoluton.getFitnessValue()+"}}");
+		out.close();
 
 		/* System.out.println("best Solution:"+bestSoluton.getGene(0).getAllele()); */
 

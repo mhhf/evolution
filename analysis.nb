@@ -1,0 +1,85 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      2396,         76]
+NotebookOptionsPosition[      2041,         59]
+NotebookOutlinePosition[      2379,         74]
+CellTagsIndexPosition[      2336,         71]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"x", " ", "=", " ", 
+  RowBox[{
+  "Import", "[", "\"\<Documents/Arbeit/evol/out.txt\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.574156739489867*^9, 3.574156822583206*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", "x", "]"}]], "Input",
+ CellChangeTimes->{{3.574156598984518*^9, 3.574156628922895*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxd1EtoE2EUBeDRnSi2iKCV1qR1JQjWdaEcX8VIrPGBKIKOg4nYSjJqtbXR
+dJrYmJhoQ7Owgsg0utU+REJx4aAupHSRjUIpyNAaEao0IkgUah1lLnLvwDB8
+3Dn/5Wz+Ri1yOLhSURTNef9+92fS2nh9C3ZtamhY+jgH5d/Tig3Pi8Xub+Q9
+eNLm821dNe/aJ9yOX7l8/pnHtXEIdWahEN9B86P4/nBkpLGV5sew7ke1unEv
+zU9wGydR/bK4GDlI81NIJ5LJtuOuoeKxc15/iP4/gweOd3a4tjTcc7yil/Jn
+sfu0phUSlA9yGyFu6xzeZQcHtw9R/jw3OrBlaXm5L0/5Tqyfmp7eNkz5C9xK
+mBsRYZ3b1nHA09T0apzOv8jtvcRtCauXuZUurC1OTv584drsQvuamprR17T/
+CrctbFzl9nZjuDMcfvqW9gurPdzKNXx6PzNTN0X7hdHLbQsbUW7vdW5LWL2B
+R58XFlbP0v4YtymMPm5bGAZ3TtgWbu7nNoRLwt44tx7Hy2gstvkD9ROuTXCr
+wmPCyk3ugLApXBHGAHdO2B7AkdGJiaF56p/kNoRLwt5b3LqwJVyb4lZTCPVE
+oy1l6p/C/blyOfiV+qe5A8KmcEUYt7lzwrZwc4bbEC5l4HHuk0iV+me5dWEr
+izf7/H7/b+p/h1sVHhNW7nIHhE3hyn//AXcmNYI=
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 39000.},
+  PlotRange->{{0., 990.}, {38695.90980391625, 40946.38431371891}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.5741566314511337`*^9}]
+}, Open  ]]
+},
+WindowSize->{640, 656},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 197, 4, 27, "Input"],
+Cell[CellGroupData[{
+Cell[767, 28, 131, 2, 27, "Input"],
+Cell[901, 32, 1124, 24, 220, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
